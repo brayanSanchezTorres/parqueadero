@@ -22,7 +22,7 @@ public class ServicioParqueaderoTest {
 	@Test
 	public void validarConCostoExtraMoto() {
 		//Arrange
-		Vehiculo vehiculo = new Vehiculo("MOTO", "A4-B6", 2000);
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(2000).buil();
 		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
 		//Act
 		int costo = servicioParqueadero.costoExtraMoto(vehiculo);
@@ -33,7 +33,7 @@ public class ServicioParqueaderoTest {
 	@Test
 	public void validarSinCostoExtraMoto() {
 		//Arrange
-		Vehiculo vehiculo = new Vehiculo("MOTO", "A4-B6", 200);
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(200).buil();
 		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
 		//Act
 		int costo = servicioParqueadero.costoExtraMoto(vehiculo);
@@ -44,7 +44,7 @@ public class ServicioParqueaderoTest {
 	@Test
 	public void validarConAccesoPorPlacas() {
 		//Arrange
-		Vehiculo vehiculo = new Vehiculo("MOTO", "A4-B6", 200);
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(200).buil();
 		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
 		Calendar diaActual= new GregorianCalendar(2019, 5, 25, 20, 00);
 		//Act
@@ -56,7 +56,7 @@ public class ServicioParqueaderoTest {
 	@Test
 	public void validarSinAccesoPorPlacas() {
 		//Arrange
-		Vehiculo vehiculo = new Vehiculo("MOTO", "A4-B6", 200);
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(200).buil();
 		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
 		Calendar diaActual= new GregorianCalendar(2019, 5, 24, 20, 00);
 		//Act
