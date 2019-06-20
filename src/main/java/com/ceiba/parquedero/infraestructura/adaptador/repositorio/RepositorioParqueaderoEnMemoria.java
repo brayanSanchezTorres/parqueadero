@@ -1,4 +1,4 @@
-package com.ceiba.parquedero.infraestructura.repositorio;
+package com.ceiba.parquedero.infraestructura.adaptador.repositorio;
 
 import org.springframework.stereotype.Repository;
 
@@ -6,7 +6,7 @@ import com.ceiba.parquedero.dominio.modelo.Parqueadero;
 import com.ceiba.parquedero.dominio.repositorio.RepositorioParquedero;
 
 @Repository
-public class ParqueaderoRegistroEnMemoria implements RepositorioParquedero {
+public class RepositorioParqueaderoEnMemoria implements RepositorioParquedero {
 	
 	private static Parqueadero parqueadero;
 	

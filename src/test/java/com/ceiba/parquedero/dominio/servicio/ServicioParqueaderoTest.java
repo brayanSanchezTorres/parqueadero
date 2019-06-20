@@ -69,13 +69,13 @@ public class ServicioParqueaderoTest {
 	public void validarCostoPorEstadia() {
 		//Arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("CARRO").buil();
-		Calendar fechaActual = new GregorianCalendar(2019, 5, 24, 20, 00);
+		Calendar fechaActual = new GregorianCalendar(2019, 5, 24, 12, 00);
 		Calendar fechaInicial = new GregorianCalendar(2019, 5, 24, 22, 00);
 		Registro registro = new RegistroTestDataBuilder().conVehiculo(vehiculo).conFechaEntrada(fechaInicial).build();
 		ServicioParqueadero servicioParqueadero = new ServicioParqueadero();
 		//Act
 		int costo = servicioParqueadero.costoPorEstadia(registro, fechaActual);
 		//Assert
-		assertTrue(costo==2000);
+		assertTrue(costo==8000);
 	}
 }

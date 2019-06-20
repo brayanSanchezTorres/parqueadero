@@ -12,12 +12,16 @@ public class ServicioCrearRegistro {
 	
 	private static final String NO_HAY_ESPACIO_EN_EL_PARQUEADERO = "No hay espacio en el parqueadero";
 	
+	public ServicioCrearRegistro(RepositorioRegistro repositorioRegistro) {
+		this.repositorioRegistro = repositorioRegistro;
+	}
+	
 	public void ejecutar(Registro registro) {
-		if(registro.getVehiculo().getTipo().equals("CARRO")) {
+		/*if(registro.getVehiculo().getTipo().equals("CARRO")) {
 			validarPlazasDisponiblesMoto();
 		}else {
 			validarPlazasDisponiblesCarro();
-		}
+		}*/
 		this.repositorioRegistro.crear(registro);
 	}
 	

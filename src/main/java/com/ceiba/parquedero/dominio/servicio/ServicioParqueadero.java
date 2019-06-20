@@ -49,9 +49,10 @@ public class ServicioParqueadero {
 		double diferenciasHoras = (double) fechaActual.getTimeInMillis() - fechaInicial.getTimeInMillis();
 		diferenciasHoras = diferenciasHoras / mili;
 		diferenciasHoras = diferenciasHoras*24;
-		dias = (int) diferenciasHoras/24;
-		horas = (int) diferenciasHoras%24;
-		return dias==0 && horas==0 ? valorHoras : Math.abs(((valorDias*dias) + (valorHoras*horas)));
+		dias = Math.abs((int) diferenciasHoras/24);
+		horas = Math.abs((int) diferenciasHoras%24);
+		int costoHoras = horas >= 9? valorDias : valorHoras*horas ;
+		return dias==0 && horas==0 ? valorHoras : (valorDias*dias) + (costoHoras);
 	}
 	
 }

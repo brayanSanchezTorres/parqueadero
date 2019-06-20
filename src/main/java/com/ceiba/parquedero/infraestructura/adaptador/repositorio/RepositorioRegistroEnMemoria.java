@@ -1,4 +1,4 @@
-package com.ceiba.parquedero.infraestructura.repositorio;
+package com.ceiba.parquedero.infraestructura.adaptador.repositorio;
 
 import java.util.Collection;
 import java.util.UUID;
@@ -20,7 +20,7 @@ public class RepositorioRegistroEnMemoria implements RepositorioRegistro {
 	
 	@Override
 	public Collection<Registro> listar() {
-		return getRegistro();
+		return getRegistros();
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class RepositorioRegistroEnMemoria implements RepositorioRegistro {
 		return true;
 	}
 	
-	private static Collection<Registro> getRegistro() {
+	private static Collection<Registro> getRegistros() {
 		return registros.values();
 	}
 
