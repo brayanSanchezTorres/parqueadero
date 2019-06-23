@@ -11,8 +11,8 @@ public class ServicioParqueadero {
 
 	private RepositorioParquedero repositorioParquedero;
 	private RepositorioRegistro repositorioRegistro;
-	private static String CARRO = "CARRO";
-	private static String MOTO = "MOTO";
+	private static String carro = "CARRO";
+	private static String moto = "MOTO";
 
 	public ServicioParqueadero(RepositorioRegistro repositorioRegistro, RepositorioParquedero repositorioParquedero) {
 		this.repositorioParquedero = repositorioParquedero;
@@ -21,10 +21,10 @@ public class ServicioParqueadero {
 
 	public boolean hayPlazasDisponible(String tipo) {
 		boolean respuesta = false;
-		if (tipo.equals(CARRO)) {
+		if (tipo.equals(carro)) {
 			respuesta = repositorioParquedero.obtenerPlazaActualCarro() > repositorioParquedero.parqueadero()
 					.getCapacidadCarros();
-		} else if (tipo.equals(MOTO)) {
+		} else if (tipo.equals(moto)) {
 			respuesta = repositorioParquedero.obtenerPlazaActualMoto() > repositorioParquedero.parqueadero()
 					.getCapacidadMotos();
 		}
@@ -32,17 +32,17 @@ public class ServicioParqueadero {
 	}
 
 	public void aumentarPlazas(String tipo) {
-		if (tipo.equals(CARRO)) {
+		if (tipo.equals(carro)) {
 			repositorioParquedero.aumentarPlazaCarro();
-		} else if (tipo.equals(MOTO)) {
+		} else if (tipo.equals(moto)) {
 			repositorioParquedero.aumentarPlazasMoto();
 		}
 	}
 
 	public void disminuirPlazas(String tipo) {
-		if (tipo.equals(CARRO)) {
+		if (tipo.equals(carro)) {
 			repositorioParquedero.disminuirPlazasCarro();
-		} else if (tipo.equals(MOTO)) {
+		} else if (tipo.equals(moto)) {
 			repositorioParquedero.disminuirPlazasMoto();
 		}
 	}
@@ -66,9 +66,9 @@ public class ServicioParqueadero {
 
 	public int costoPorEstadia(Registro registro, Calendar fechaActual) {
 		int costo = 0;
-		if (registro.getVehiculo().getTipo().equals(CARRO)) {
+		if (registro.getVehiculo().getTipo().equals(carro)) {
 			costo += calcularCostoDiasHora(8000, 1000, registro.getFechaEntrada(), fechaActual);
-		} else if(registro.getVehiculo().getTipo().equals(MOTO)) {
+		} else if(registro.getVehiculo().getTipo().equals(moto)) {
 			costo += calcularCostoDiasHora(4000, 500, registro.getFechaEntrada(), fechaActual);
 			costo += costoExtraMoto(registro.getVehiculo());
 		}
