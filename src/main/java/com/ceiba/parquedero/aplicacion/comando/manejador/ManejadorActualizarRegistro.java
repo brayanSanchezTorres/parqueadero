@@ -33,10 +33,12 @@ public class ManejadorActualizarRegistro {
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(e.getTipo());
+			e.printStackTrace();
 		} catch (Exception e) {
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
+			e.printStackTrace();
 		}
 		
 		return respuesta;

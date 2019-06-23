@@ -55,12 +55,5 @@ public class Respuesta<Entidad> {
 	public void setListaEntidad(Collection<Entidad> listaEntidad) {
 		this.listaEntidad = listaEntidad;
 	}
-
-	@Override
-	public String toString() {
-		return "Respuesta [entidad=" + entidad + ", listaEntidad=" + listaEntidad + ", mensaje=" + mensaje + ", tipo="
-				+ tipo + ", estado=" + estado + "]";
-	}
-
 	
 }
