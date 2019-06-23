@@ -1,18 +1,17 @@
 package com.ceiba.parquedero.infraestructura.controlador;
 
-import java.util.Collection;
-
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ceiba.parquedero.aplicacion.comando.ComandoRegistro;
-import com.ceiba.parquedero.aplicacion.comando.ComandoVehiculo;
+import com.ceiba.parquedero.aplicacion.comando.manejador.ManejadorActualizarRegistro;
 import com.ceiba.parquedero.aplicacion.comando.manejador.ManejadorCrearRegistro;
 import com.ceiba.parquedero.aplicacion.consulta.manejador.ManejadorListarRegistros;
+import com.ceiba.parquedero.aplicacion.respuestadto.Respuesta;
 import com.ceiba.parquedero.dominio.modelo.Registro;
 
 import io.swagger.annotations.Api;
@@ -20,34 +19,37 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/registro/")
-@Api(tags = {"controlador registro"})
+@Api(tags = { "controlador registro" })
 public class ControladorRegistro {
-	
+
 	private final ManejadorListarRegistros manejadorListarRegistros;
 	private final ManejadorCrearRegistro manejadorCrearRegistro;
-	
-	private ControladorRegistro(ManejadorListarRegistros manejadorListarRegistros, ManejadorCrearRegistro manejadorCrearRegistro) {
+	private final ManejadorActualizarRegistro manejadorActualizarRegistro;
+
+	public ControladorRegistro(ManejadorListarRegistros manejadorListarRegistros,
+			ManejadorCrearRegistro manejadorCrearRegistro, ManejadorActualizarRegistro manejadorActualizarRegistro) {
 		this.manejadorCrearRegistro = manejadorCrearRegistro;
 		this.manejadorListarRegistros = manejadorListarRegistros;
+		this.manejadorActualizarRegistro = manejadorActualizarRegistro;
 	}
-	
-	@RequestMapping(method = RequestMethod.GET)
+
+	@GetMapping
 	@ApiOperation("listar")
-	public Collection<Registro> listar(){
+	public Respuesta<Registro> listar() {
 		return this.manejadorListarRegistros.ejecutar();
 	}
-	
+
 	@PostMapping
 	@ApiOperation("crear")
-	public void crear(@RequestBody ComandoRegistro comandoRegistro) {
-		this.manejadorCrearRegistro.ejecutar(comandoRegistro);
+	public Respuesta<ComandoRegistro> crear(@RequestBody ComandoRegistro comandoRegistro) {
+		return this.manejadorCrearRegistro.ejecutar(comandoRegistro);
+		
 	}
-	
+
 	@PutMapping
-	@ApiOperation("prueba")
-	public ComandoVehiculo regrea(@RequestBody ComandoVehiculo res) {
-		res.setPlaca("cambio");
-		return res;
+	@ApiOperation("actualizar")
+	public Respuesta<Registro> actualizar(@RequestBody ComandoRegistro comandoRegistro) {
+		return this.manejadorActualizarRegistro.ejecutar(comandoRegistro);
 	}
 
 }

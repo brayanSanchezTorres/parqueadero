@@ -23,7 +23,9 @@ public class ServicioParqueaderoTest {
 	public void validarConCostoExtraMoto() {
 		//Arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(2000).buil();
-		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
+		RepositorioParquedero repositorioParquedero = Mockito.mock(RepositorioParquedero.class);
+		RepositorioRegistro repositorioRegistro = Mockito.mock(RepositorioRegistro.class);
+		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero(repositorioRegistro, repositorioParquedero);
 		//Act
 		int costo = servicioParqueadero.costoExtraMoto(vehiculo);
 		//Assert
@@ -34,7 +36,9 @@ public class ServicioParqueaderoTest {
 	public void validarSinCostoExtraMoto() {
 		//Arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(200).buil();
-		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
+		RepositorioParquedero repositorioParquedero = Mockito.mock(RepositorioParquedero.class);
+		RepositorioRegistro repositorioRegistro = Mockito.mock(RepositorioRegistro.class);
+		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero(repositorioRegistro, repositorioParquedero);
 		//Act
 		int costo = servicioParqueadero.costoExtraMoto(vehiculo);
 		//Assert
@@ -45,7 +49,9 @@ public class ServicioParqueaderoTest {
 	public void validarConAccesoPorPlacas() {
 		//Arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(200).buil();
-		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
+		RepositorioParquedero repositorioParquedero = Mockito.mock(RepositorioParquedero.class);
+		RepositorioRegistro repositorioRegistro = Mockito.mock(RepositorioRegistro.class);
+		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero(repositorioRegistro, repositorioParquedero);
 		Calendar diaActual= new GregorianCalendar(2019, 5, 25, 20, 00);
 		//Act
 		boolean acceso = servicioParqueadero.accesoPorPlacas(vehiculo, diaActual);
@@ -57,7 +63,9 @@ public class ServicioParqueaderoTest {
 	public void validarSinAccesoPorPlacas() {
 		//Arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conTipo("MOTO").conPlaca("A4-B6").conCilindraje(200).buil();
-		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero();
+		RepositorioParquedero repositorioParquedero = Mockito.mock(RepositorioParquedero.class);
+		RepositorioRegistro repositorioRegistro = Mockito.mock(RepositorioRegistro.class);
+		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero(repositorioRegistro, repositorioParquedero);
 		Calendar diaActual= new GregorianCalendar(2019, 5, 24, 20, 00);
 		//Act
 		boolean acceso = servicioParqueadero.accesoPorPlacas(vehiculo, diaActual);
@@ -72,7 +80,9 @@ public class ServicioParqueaderoTest {
 		Calendar fechaActual = new GregorianCalendar(2019, 5, 24, 12, 00);
 		Calendar fechaInicial = new GregorianCalendar(2019, 5, 24, 22, 00);
 		Registro registro = new RegistroTestDataBuilder().conVehiculo(vehiculo).conFechaEntrada(fechaInicial).build();
-		ServicioParqueadero servicioParqueadero = new ServicioParqueadero();
+		RepositorioParquedero repositorioParquedero = Mockito.mock(RepositorioParquedero.class);
+		RepositorioRegistro repositorioRegistro = Mockito.mock(RepositorioRegistro.class);
+		ServicioParqueadero servicioParqueadero =  new ServicioParqueadero(repositorioRegistro, repositorioParquedero);
 		//Act
 		int costo = servicioParqueadero.costoPorEstadia(registro, fechaActual);
 		//Assert

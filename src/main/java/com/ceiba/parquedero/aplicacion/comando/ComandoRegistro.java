@@ -2,7 +2,7 @@ package com.ceiba.parquedero.aplicacion.comando;
 
 import java.util.Calendar;
 
-import com.ceiba.parquedero.aplicacion.comando.ComandoVehiculo;;
+import com.ceiba.parquedero.aplicacion.comando.ComandoVehiculo;
 
 public class ComandoRegistro {
 	
