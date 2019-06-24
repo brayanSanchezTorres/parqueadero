@@ -54,23 +54,5 @@ public class ServicioCrearRegistroTest {
 		}
 	}
 	
-	@Test
-	public void validarPlazasDisponiblesCarro() {
-		when(servicioParqueadero.hayPlazasDisponible("CARRO")).thenReturn(true);
-		try {
-			this.servicioCrearRegistro.validarPlazasdisponibles("CARRO");
-		} catch (Exception e) {
-			assertEquals(ESPACIO_RESPUESTA_ESPERADA, e.getMessage());
-		}
-	}
 	
-	@Test
-	public void validarPlazasDisponiblesMoto() {
-		when(servicioParqueadero.hayPlazasDisponible("MOTO")).thenReturn(true);
-		try {
-			this.servicioCrearRegistro.validarPlazasdisponibles("MOTO");
-		} catch (Exception e) {
-			assertEquals(ESPACIO_RESPUESTA_ESPERADA, e.getMessage());
-		}
-	}
 }
