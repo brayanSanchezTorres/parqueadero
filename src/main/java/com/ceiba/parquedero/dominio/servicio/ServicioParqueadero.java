@@ -22,11 +22,9 @@ public class ServicioParqueadero {
 	public boolean hayPlazasDisponible(String tipo) {
 		boolean respuesta = false;
 		if (tipo.equals(carro)) {
-			respuesta = repositorioParquedero.obtenerPlazaActualCarro() > repositorioParquedero.parqueadero()
-					.getCapacidadCarros();
+			respuesta = repositorioParquedero.obtenerPlazaActualCarro() < repositorioParquedero.obtenerPlazaCarro();
 		} else if (tipo.equals(moto)) {
-			respuesta = repositorioParquedero.obtenerPlazaActualMoto() > repositorioParquedero.parqueadero()
-					.getCapacidadMotos();
+			respuesta = repositorioParquedero.obtenerPlazaActualMoto() < repositorioParquedero.obtenerPlazaMoto();
 		}
 		return respuesta;
 	}

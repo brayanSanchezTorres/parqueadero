@@ -28,7 +28,17 @@ public class RepositorioParqueaderoEnMemoria implements RepositorioParquedero {
 	public int obtenerPlazaActualCarro() {
 		return parqueadero.getCapacidadCarrosActual();
 	}
-
+	
+	@Override
+	public int obtenerPlazaCarro() {
+		return parqueadero.getCapacidadCarros();
+	}
+	
+	@Override
+	public int obtenerPlazaMoto() {
+		return parqueadero.getCapacidadMotos();
+	}
+	
 	@Override
 	public void aumentarPlazasMoto() {
 		parqueadero.setCapacidadMotosActula(parqueadero.getCapacidadMotosActual() + 1);

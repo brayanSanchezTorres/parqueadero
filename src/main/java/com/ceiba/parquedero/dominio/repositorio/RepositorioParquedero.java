@@ -10,6 +10,10 @@ public interface RepositorioParquedero {
 	
 	int obtenerPlazaActualCarro();
 	
+	int obtenerPlazaCarro();
+	
+	int obtenerPlazaMoto();
+	
 	void aumentarPlazasMoto();
 	
 	void aumentarPlazaCarro();
