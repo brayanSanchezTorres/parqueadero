@@ -1,9 +1,5 @@
 package com.ceiba.parquedero.dominio.servicio;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.when;
-
 import org.junit.Before;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

@@ -19,7 +19,7 @@ public class RepositorioRegistroEnMemoria implements RepositorioRegistro {
 	static {
 		registros = new ConcurrentHashMap<>();
 		registros.put(UUID.randomUUID().toString(),
-				new Registro(new Vehiculo("CARRO", "AB-12", 200), new GregorianCalendar(2019, 5, 22, 20, 00)));
+				new Registro(new Vehiculo("CARRO", "AB-12", 200), new GregorianCalendar(2019, 5, 22, 20, 0)));
 	}
 
 	@Override

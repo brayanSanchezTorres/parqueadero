@@ -55,10 +55,12 @@ public class ServicioParqueadero {
 
 	public boolean accesoPorPlacas(Vehiculo vehiculo, Calendar diaActual) {
 		boolean placaIniciaConA = vehiculo.getPlaca().substring(0).startsWith("A");
+		boolean accesoPermitido = true;
+		boolean accesoDenegado = false;
 		if (placaIniciaConA) {
-			return diaActual.get(Calendar.DAY_OF_WEEK) < 3 ? false : true;
+			return diaActual.get(Calendar.DAY_OF_WEEK) < 3 ? accesoDenegado : accesoPermitido;
 		} else {
-			return true;
+			return accesoPermitido;
 		}
 	}
 
