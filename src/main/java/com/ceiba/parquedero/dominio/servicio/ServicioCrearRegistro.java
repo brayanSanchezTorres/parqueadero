@@ -27,8 +27,8 @@ public class ServicioCrearRegistro {
 	}
 	
 	public void validarPlazasdisponibles(String tipo) throws ParqueaderoExcepcion {
-		boolean espacio = servicioParqueadero.hayPlazasDisponible(tipo);
-		if(espacio) {
+		boolean noHayEspacio = servicioParqueadero.hayPlazasDisponible(tipo);
+		if(noHayEspacio) {
 			throw new ParqueaderoExcepcion(ParqueaderoExcepcionTipos.ESPACIOS_PLAZAS, NO_HAY_ESPACIO_EN_EL_PARQUEADERO);
 		}
 	}
