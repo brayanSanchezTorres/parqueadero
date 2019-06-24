@@ -15,9 +15,6 @@ import com.ceiba.parquedero.dominio.repositorio.RepositorioRegistro;
 
 public class ServicioCrearRegistroTest {
 	
-	private static final String EXISTENCIA_RESPUESTA_ESPERADA = "Este Vehiculo ya se encuentra en el parqueadero";
-	private static final String ESPACIO_RESPUESTA_ESPERADA = "No hay espacio en el parqueadero";
-	
 	@InjectMocks
 	private ServicioCrearRegistro servicioCrearRegistro;
 
@@ -42,5 +39,24 @@ public class ServicioCrearRegistroTest {
 		this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("MOTO");
 	}
 	
+	@Test(expected = ParqueaderoExcepcion.class)
+	public void validarExistenciaCarro() throws ParqueaderoExcepcion {
+		when(servicioParqueadero.existeEnParqueadero("CARRO")).thenReturn(true);
 
+		this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("CARRO");
+	}
+	
+	@Test(expected = ParqueaderoExcepcion.class)
+	public void validarPlazasDisponiblesCarro() throws ParqueaderoExcepcion {
+		when(servicioParqueadero.hayPlazasDisponible("CARRO")).thenReturn(true);
+
+		this.servicioCrearRegistro.validarPlazasdisponibles("CARRO");
+	}
+	
+	@Test(expected = ParqueaderoExcepcion.class)
+	public void validarPlazasDisponiblesMoto() throws ParqueaderoExcepcion {
+		when(servicioParqueadero.hayPlazasDisponible("MOTO")).thenReturn(true);
+	
+		this.servicioCrearRegistro.validarPlazasdisponibles("MOTO");
+	}
 }

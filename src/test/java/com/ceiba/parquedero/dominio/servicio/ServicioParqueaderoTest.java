@@ -46,7 +46,7 @@ public class ServicioParqueaderoTest {
 
 		boolean hayEspacioCarro = this.servicioParqueadero.hayPlazasDisponible("CARRO");
 
-		assertTrue(hayEspacioCarro);
+		assertTrue(!hayEspacioCarro);
 	}
 
 	@Test
@@ -56,7 +56,7 @@ public class ServicioParqueaderoTest {
 
 		boolean hayEspacioMoto = this.servicioParqueadero.hayPlazasDisponible("MOTO");
 
-		assertTrue(hayEspacioMoto);
+		assertTrue(!hayEspacioMoto);
 	}
 
 	@Test

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-06-23T20:29:32" hostname="BRAYAN-SANCHEZ" time="1.141">
+<testsuite name="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-06-24T12:31:10" hostname="BRAYAN-SANCHEZ" time="0.035">
   <properties/>
-  <testcase name="validarSinAccesoPorPlacas" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="1.127"/>
+  <testcase name="validarEspacioDisponibleCarro" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.008"/>
+  <testcase name="validarSinAccesoPorPlacas" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.014"/>
+  <testcase name="validarCostoPorEstadiaMotoConExtra" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.001"/>
+  <testcase name="validarCostoPorEstadiaMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.001"/>
   <testcase name="validarSinCostoExtraMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.001"/>
-  <testcase name="validarCostoPorEstadia" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.004"/>
   <testcase name="validarConAccesoPorPlacas" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.001"/>
+  <testcase name="validarCostoPorEstadiaCarro" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.001"/>
+  <testcase name="validarEspacioDisponibleMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.002"/>
   <testcase name="validarConCostoExtraMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioParqueaderoTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
