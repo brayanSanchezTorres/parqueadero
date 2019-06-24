@@ -9,6 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcion;
 import com.ceiba.parquedero.dominio.repositorio.RepositorioParquedero;
 import com.ceiba.parquedero.dominio.repositorio.RepositorioRegistro;
 
@@ -34,25 +35,12 @@ public class ServicioCrearRegistroTest {
 		MockitoAnnotations.initMocks(this);
 	}
 
-	@Test
-	public void validarExistenciaMoto() {
+	@Test(expected = ParqueaderoExcepcion.class)
+	public void validarExistenciaMoto() throws ParqueaderoExcepcion {
 		when(servicioParqueadero.existeEnParqueadero("MOTO")).thenReturn(true);
-		try {
-			this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("MOTO");
-		} catch (Exception e) {
-			assertEquals(EXISTENCIA_RESPUESTA_ESPERADA, e.getMessage());
-		}
+		
+		this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("MOTO");
 	}
 	
-	@Test
-	public void validarExistenciaCarro() {
-		when(servicioParqueadero.existeEnParqueadero("CARRO")).thenReturn(true);
-		try {
-			this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("CARRO");
-		} catch (Exception e) {
-			assertEquals(EXISTENCIA_RESPUESTA_ESPERADA, e.getMessage());
-		}
-	}
-	
-	
+
 }
