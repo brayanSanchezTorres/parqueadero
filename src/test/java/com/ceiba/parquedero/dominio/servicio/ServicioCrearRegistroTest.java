@@ -1,9 +1,6 @@
 package com.ceiba.parquedero.dominio.servicio;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 import static org.mockito.Mockito.when;
 
 import org.junit.Before;
@@ -12,12 +9,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcion;
-import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcionTipos;
 import com.ceiba.parquedero.dominio.repositorio.RepositorioParquedero;
 import com.ceiba.parquedero.dominio.repositorio.RepositorioRegistro;
-
-import junit.framework.Assert;
 
 public class ServicioCrearRegistroTest {
 	
@@ -46,7 +39,6 @@ public class ServicioCrearRegistroTest {
 		when(servicioParqueadero.existeEnParqueadero("MOTO")).thenReturn(true);
 		try {
 			this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("MOTO");
-			fail();
 		} catch (Exception e) {
 			assertEquals(EXISTENCIA_RESPUESTA_ESPERADA, e.getMessage());
 		}
@@ -57,7 +49,6 @@ public class ServicioCrearRegistroTest {
 		when(servicioParqueadero.existeEnParqueadero("CARRO")).thenReturn(true);
 		try {
 			this.servicioCrearRegistro.validarExistenciaPlacaSinSalida("CARRO");
-			fail();
 		} catch (Exception e) {
 			assertEquals(EXISTENCIA_RESPUESTA_ESPERADA, e.getMessage());
 		}
@@ -68,7 +59,6 @@ public class ServicioCrearRegistroTest {
 		when(servicioParqueadero.hayPlazasDisponible("CARRO")).thenReturn(true);
 		try {
 			this.servicioCrearRegistro.validarPlazasdisponibles("CARRO");
-			fail();
 		} catch (Exception e) {
 			assertEquals(ESPACIO_RESPUESTA_ESPERADA, e.getMessage());
 		}
@@ -79,7 +69,6 @@ public class ServicioCrearRegistroTest {
 		when(servicioParqueadero.hayPlazasDisponible("MOTO")).thenReturn(true);
 		try {
 			this.servicioCrearRegistro.validarPlazasdisponibles("MOTO");
-			fail();
 		} catch (Exception e) {
 			assertEquals(ESPACIO_RESPUESTA_ESPERADA, e.getMessage());
 		}
