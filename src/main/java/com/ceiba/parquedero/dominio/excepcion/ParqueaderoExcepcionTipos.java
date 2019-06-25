@@ -4,6 +4,7 @@ public enum ParqueaderoExcepcionTipos {
 	
 	ESPACIOS_PLAZAS,
 	EXISTENCIA_PARQUEADERO,
+	ACCESO_PLACAS,
 	GENERICO,
 	;
 	

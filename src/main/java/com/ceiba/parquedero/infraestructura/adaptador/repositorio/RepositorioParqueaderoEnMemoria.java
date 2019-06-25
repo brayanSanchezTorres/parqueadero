@@ -11,7 +11,7 @@ public class RepositorioParqueaderoEnMemoria implements RepositorioParquedero {
 	private static Parqueadero parqueadero;
 
 	static {
-		parqueadero = new Parqueadero(20, 10, 1, 0);
+		parqueadero = new Parqueadero(19, 9, 1, 0);
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package com.ceiba.parquedero.infraestructura.controlador;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -18,21 +20,28 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/registro/")
+@CrossOrigin(origins = "*")
+@RequestMapping("/registro")
 @Api(tags = { "controlador registro" })
 public class ControladorRegistro {
-
+	
+	@Autowired
 	private final ManejadorListarRegistros manejadorListarRegistros;
+	
+	@Autowired
 	private final ManejadorCrearRegistro manejadorCrearRegistro;
+	
+	@Autowired
 	private final ManejadorActualizarRegistro manejadorActualizarRegistro;
-
+	
+	
 	public ControladorRegistro(ManejadorListarRegistros manejadorListarRegistros,
 			ManejadorCrearRegistro manejadorCrearRegistro, ManejadorActualizarRegistro manejadorActualizarRegistro) {
 		this.manejadorCrearRegistro = manejadorCrearRegistro;
 		this.manejadorListarRegistros = manejadorListarRegistros;
 		this.manejadorActualizarRegistro = manejadorActualizarRegistro;
 	}
-
+	
 	@GetMapping
 	@ApiOperation("listar")
 	public Respuesta<Registro> listar() {
