@@ -42,7 +42,7 @@ public class RegistroTestDataBuilder {
 	}
 	
 	public Registro build() {
-		return new Registro(vehiculo,fechaEntrada);
+		return new Registro(vehiculo,fechaEntrada,fechaSalida,costoEstadia);
 	}
 	
 }
