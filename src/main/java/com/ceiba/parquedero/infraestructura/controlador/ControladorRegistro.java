@@ -14,7 +14,6 @@ import com.ceiba.parquedero.aplicacion.comando.manejador.ManejadorActualizarRegi
 import com.ceiba.parquedero.aplicacion.comando.manejador.ManejadorCrearRegistro;
 import com.ceiba.parquedero.aplicacion.consulta.manejador.ManejadorListarRegistros;
 import com.ceiba.parquedero.aplicacion.respuestadto.Respuesta;
-import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcion;
 import com.ceiba.parquedero.dominio.modelo.Registro;
 
 import io.swagger.annotations.Api;
@@ -40,7 +39,7 @@ public class ControladorRegistro {
 	
 	@GetMapping
 	@ApiOperation("listar")
-	public Respuesta<Registro> listar() throws ParqueaderoExcepcion {
+	public Respuesta<Registro> listar() {
 		return this.manejadorListarRegistros.ejecutar();
 	}
 
