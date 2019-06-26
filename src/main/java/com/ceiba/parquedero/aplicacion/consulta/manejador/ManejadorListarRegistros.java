@@ -13,7 +13,7 @@ import com.ceiba.parquedero.dominio.repositorio.RepositorioRegistro;
 public class ManejadorListarRegistros {
 	private final RepositorioRegistro repositorioRegistro;
 	
-	private static final Logger LOG_LISTAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
+	private static final Logger LOGLISTAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
 
 	public ManejadorListarRegistros(RepositorioRegistro daoRegistro) {
 		this.repositorioRegistro = daoRegistro;
@@ -25,7 +25,7 @@ public class ManejadorListarRegistros {
 			respuesta.setListaEntidad(this.repositorioRegistro.listar());
 			respuesta.setEstado(true);
 		} catch (Exception e) {
-			LOG_LISTAR.error(e.getMessage(), e);
+			LOGLISTAR.error(e.getMessage(), e);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setEstado(false);
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);

@@ -18,7 +18,7 @@ public class ManejadorActualizarRegistro {
 
 	private final ServicioActualizarRegistro servicioActualizarRegistro;
 	
-	private static final Logger LOG_ACTUALIZAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
+	private static final Logger LOGACTUALIZAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
 	
 	public ManejadorActualizarRegistro(ServicioActualizarRegistro servicioActualizarRegistro) {
 		this.servicioActualizarRegistro = servicioActualizarRegistro;
@@ -35,12 +35,12 @@ public class ManejadorActualizarRegistro {
 			respuesta.setMensaje("Tarea Existosa");
 			respuesta.setEntidad(registro);
 		} catch (ParqueaderoExcepcion e) {
-			LOG_ACTUALIZAR.error(e.getMessage(), e);
+			LOGACTUALIZAR.error(e.getMessage(), e);
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(e.getTipo());
 		} catch (Exception e) {
-			LOG_ACTUALIZAR.error(e.getMessage(), e);
+			LOGACTUALIZAR.error(e.getMessage(), e);
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);

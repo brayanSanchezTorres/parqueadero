@@ -18,7 +18,7 @@ public class ManejadorCrearRegistro {
 
 	private final ServicioCrearRegistro servicioCrearRegistro;
 	
-	private static final Logger LOG_CREAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
+	private static final Logger LOGCREAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
 
 	public ManejadorCrearRegistro(ServicioCrearRegistro servicioCrearRegistro) {
 		this.servicioCrearRegistro = servicioCrearRegistro;
@@ -34,12 +34,12 @@ public class ManejadorCrearRegistro {
 			respuesta.setEstado(true);
 			respuesta.setMensaje("Tarea Existosa");
 		} catch (ParqueaderoExcepcion e) {
-			LOG_CREAR.error(e.getMessage(), e);
+			LOGCREAR.error(e.getMessage(), e);
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(e.getTipo());
 		} catch (Exception e) {
-			LOG_CREAR.error(e.getMessage(), e);
+			LOGCREAR.error(e.getMessage(), e);
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
