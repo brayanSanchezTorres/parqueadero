@@ -13,14 +13,6 @@ public class ComandoRegistro {
 		super();
 	}
 	
-	public ComandoRegistro(ComandoVehiculo vehiculo, Calendar fechaEntrada, Calendar fechaSalida, double costoEstadia) {
-		super();
-		this.vehiculo = vehiculo;
-		this.fechaEntrada = fechaEntrada;
-		this.fechaSalida = fechaSalida;
-		this.costoEstadia = costoEstadia;
-	}
-	
 	public ComandoVehiculo getVehiculo() {
 		return vehiculo;
 	}

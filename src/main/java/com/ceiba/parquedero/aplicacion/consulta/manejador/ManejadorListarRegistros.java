@@ -27,8 +27,4 @@ public class ManejadorListarRegistros {
 		}
 		return respuesta;
 	}
-	
-	public String retornarString() {
-		return "hola";
-	}
 }

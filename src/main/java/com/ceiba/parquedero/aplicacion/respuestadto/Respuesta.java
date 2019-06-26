@@ -4,10 +4,10 @@ import java.util.Collection;
 
 import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcionTipos;
 
-public class Respuesta<entidad> {
+public class Respuesta<ENTIDAD> {
 
-	private entidad entidad;
-	private Collection<entidad> listaEntidad;
+	private ENTIDAD entidad;
+	private Collection<ENTIDAD> listaEntidad;
 	private String mensaje;
 	private ParqueaderoExcepcionTipos tipo;
 	private Boolean estado;
@@ -16,11 +16,11 @@ public class Respuesta<entidad> {
 		super();
 	}
 
-	public entidad getEntidad() {
+	public ENTIDAD getEntidad() {
 		return entidad;
 	}
 
-	public void setEntidad(entidad entidad) {
+	public void setEntidad(ENTIDAD entidad) {
 		this.entidad = entidad;
 	}
 
@@ -48,11 +48,11 @@ public class Respuesta<entidad> {
 		this.estado = estado;
 	}
 
-	public Collection<entidad> getListaEntidad() {
+	public Collection<ENTIDAD> getListaEntidad() {
 		return listaEntidad;
 	}
 
-	public void setListaEntidad(Collection<entidad> listaEntidad) {
+	public void setListaEntidad(Collection<ENTIDAD> listaEntidad) {
 		this.listaEntidad = listaEntidad;
 	}
 	
