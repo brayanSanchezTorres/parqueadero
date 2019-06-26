@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ceiba.parquedero.dominio.servicio.ServicioActualizarRegistroTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-26T02:35:41" hostname="BRAYAN-SANCHEZ" time="1.108">
+  <properties/>
+  <testcase name="validarExistenciaEnParqueaderoMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioActualizarRegistroTest" time="1.106"/>
+  <testcase name="validarExistenciaEnParqueaderoCarro" classname="com.ceiba.parquedero.dominio.servicio.ServicioActualizarRegistroTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

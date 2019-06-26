@@ -67,5 +67,4 @@ public class ControladorRegistroTest {
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andExpect(MockMvcResultMatchers.jsonPath("$.estado", Matchers.is(false)));
 	}
-	
 }

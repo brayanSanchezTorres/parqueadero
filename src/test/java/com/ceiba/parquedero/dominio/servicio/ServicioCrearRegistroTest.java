@@ -73,4 +73,5 @@ public class ServicioCrearRegistroTest {
 		
 		this.servicioCrearRegistro.validarAccesoPorPlacas(vehiculo, diaActual);
 	}
+
 }
