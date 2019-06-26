@@ -12,7 +12,6 @@ public class Parqueadero implements Serializable {
 	private int capacidadMotosActual;
 	
 	public Parqueadero(int capacidadCarros, int capacidadMotos, int capacidadCarrosActual, int capacidadMotosActual) {
-		super();
 		this.capacidadCarros = capacidadCarros;
 		this.capacidadMotos = capacidadMotos;
 		this.capacidadCarrosActual = capacidadCarrosActual;

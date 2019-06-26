@@ -9,10 +9,6 @@ public class ComandoRegistro {
 	private Calendar fechaSalida;
 	private double costoEstadia;
 	
-	public ComandoRegistro() {
-		super();
-	}
-	
 	public ComandoVehiculo getVehiculo() {
 		return vehiculo;
 	}

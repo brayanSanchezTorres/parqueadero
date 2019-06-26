@@ -6,10 +6,6 @@ public class ComandoVehiculo {
 	private String placa;
 	private int cilindraje;
 	
-	public ComandoVehiculo() {
-		super();
-	}
-	
 	public String getTipo() {
 		return tipo;
 	}

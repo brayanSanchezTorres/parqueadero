@@ -8,7 +8,6 @@ public class Vehiculo{
 	
 
 	public Vehiculo(String tipo, String placa, int cilindraje) {
-		super();
 		this.tipo = tipo;
 		this.placa = placa;
 		this.cilindraje = cilindraje;

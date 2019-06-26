@@ -12,10 +12,6 @@ public class Respuesta<T> {
 	private ParqueaderoExcepcionTipos tipo;
 	private Boolean estado;
 
-	public Respuesta() {
-		super();
-	}
-
 	public T getEntidad() {
 		return entidad;
 	}

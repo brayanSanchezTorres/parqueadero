@@ -7,7 +7,6 @@ public class ParqueaderoExcepcion extends Exception {
 	private final ParqueaderoExcepcionTipos tipo;
 
 	public ParqueaderoExcepcion(ParqueaderoExcepcionTipos tipo) {
-		super();
 		this.tipo = tipo;
 	}
 

@@ -10,7 +10,6 @@ public class Registro {
 	private double costoEstadia;
 	
 	public Registro(Vehiculo vehiculo, Calendar fechaEntrada) {
-		super();
 		this.vehiculo = vehiculo;
 		this.fechaEntrada = fechaEntrada;
 		this.fechaSalida = null;
