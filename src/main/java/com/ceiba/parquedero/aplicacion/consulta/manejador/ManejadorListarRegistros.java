@@ -25,7 +25,7 @@ public class ManejadorListarRegistros {
 			respuesta.setListaEntidad(this.repositorioRegistro.listar());
 			respuesta.setEstado(true);
 		} catch (Exception e) {
-			LOG.error(e.getMessage());
+			LOG.error(e.getMessage(), e);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setEstado(false);
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
