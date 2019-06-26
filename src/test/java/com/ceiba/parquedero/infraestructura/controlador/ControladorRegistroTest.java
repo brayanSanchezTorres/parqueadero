@@ -57,4 +57,15 @@ public class ControladorRegistroTest {
 				.andExpect(MockMvcResultMatchers.jsonPath("$.estado", Matchers.is(true)));
 	}
 	
+	@Test
+	public void testActualizarRegistroFallo() throws Exception {
+		String jsonDiferente = "{\"vehiculo\":{\"tipo\":\"MOTO\",\"placa\":\"ABC3\",\"cilindraje\":2000},\"fechaEntrada\":\"2019-06-25T03:00:00.000+0000\"}";
+		
+		mockMvc.perform(MockMvcRequestBuilders.put("/registro")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(jsonDiferente))
+				.andExpect(MockMvcResultMatchers.status().isOk())
+				.andExpect(MockMvcResultMatchers.jsonPath("$.estado", Matchers.is(false)));
+	}
+	
 }

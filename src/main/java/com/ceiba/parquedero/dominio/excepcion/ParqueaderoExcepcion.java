@@ -4,7 +4,7 @@ public class ParqueaderoExcepcion extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	private ParqueaderoExcepcionTipos tipo;
+	private final ParqueaderoExcepcionTipos tipo;
 
 	public ParqueaderoExcepcion(ParqueaderoExcepcionTipos tipo) {
 		super();

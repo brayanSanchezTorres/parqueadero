@@ -1,6 +1,5 @@
 package com.ceiba.parquedero.aplicacion.comando.manejador;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.ceiba.parquedero.aplicacion.comando.ComandoRegistro;
