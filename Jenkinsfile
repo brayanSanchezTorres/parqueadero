@@ -29,6 +29,7 @@ pipeline {
         'Git_Centos', submoduleCfg: [], userRemoteConfigs: [[credentialsId:
         'GitHub_brayanSanchezTorres', url:
         'https://github.com/brayanSanchezTorres/parqueadero']]])
+        sh 'gradle clean'
 	 		}
 	 	}
 	 	
