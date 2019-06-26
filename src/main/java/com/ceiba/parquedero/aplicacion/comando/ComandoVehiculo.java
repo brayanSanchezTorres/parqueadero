@@ -9,13 +9,6 @@ public class ComandoVehiculo {
 	public ComandoVehiculo() {
 		super();
 	}
-
-	public ComandoVehiculo(String tipo, String placa, int cilindraje) {
-		super();
-		this.tipo = tipo;
-		this.placa = placa;
-		this.cilindraje = cilindraje;
-	}
 	
 	public String getTipo() {
 		return tipo;

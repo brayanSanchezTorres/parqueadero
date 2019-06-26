@@ -2,8 +2,6 @@ package com.ceiba.parquedero.aplicacion.comando;
 
 import java.util.Calendar;
 
-import com.ceiba.parquedero.aplicacion.comando.ComandoVehiculo;
-
 public class ComandoRegistro {
 	
 	private ComandoVehiculo vehiculo;
@@ -13,14 +11,6 @@ public class ComandoRegistro {
 	
 	public ComandoRegistro() {
 		super();
-	}
-	
-	public ComandoRegistro(ComandoVehiculo vehiculo, Calendar fechaEntrada) {
-		super();
-		this.vehiculo = vehiculo;
-		this.fechaEntrada = fechaEntrada;
-		this.fechaSalida = null;
-		this.costoEstadia = 0;
 	}
 	
 	public ComandoRegistro(ComandoVehiculo vehiculo, Calendar fechaEntrada, Calendar fechaSalida, double costoEstadia) {
