@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.454s</div>
+<div class="counter">0.445s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testActualizarRegistroFallo</td>
-<td class="success">0.040s</td>
+<td class="success">0.036s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -89,12 +89,12 @@
 </tr>
 <tr>
 <td class="success">testCrearRegistros</td>
-<td class="success">0.041s</td>
+<td class="success">0.040s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetRegistros</td>
-<td class="success">0.043s</td>
+<td class="success">0.039s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,31 +102,31 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>21:35:42.851 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:42.866 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-21:35:42.884 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-21:35:42.935 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-21:35:42.958 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest], using SpringBootContextLoader
-21:35:42.964 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: class path resource [com/ceiba/parquedero/infraestructura/controlador/ControladorRegistroTest-context.xml] does not exist
-21:35:42.965 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: class path resource [com/ceiba/parquedero/infraestructura/controlador/ControladorRegistroTestContext.groovy] does not exist
-21:35:42.966 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-21:35:42.968 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: ControladorRegistroTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:35:43.074 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.249 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\brayan.sanchez\Documents\parqueadero\build\classes\java\main\com\ceiba\parquedero\ParquederoCeibaApplication.class]
-21:35:43.251 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ceiba.parquedero.ParquederoCeibaApplication for test class com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest
-21:35:43.491 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: using defaults.
-21:35:43.492 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-21:35:43.524 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-21:35:43.525 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-21:35:43.526 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e0840f9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2bcba1cc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7dc51939, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a721ca7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36618e98, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@40d29c59, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@158b59ab, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f26f899, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1589b6ab, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41edd017]
-21:35:43.530 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.532 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.532 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.532 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.541 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@626f06e8 testClass = ControladorRegistroTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4a35dcb2 testClass = ControladorRegistroTest, locations = '{}', classes = '{class com.ceiba.parquedero.ParquederoCeibaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e7e8512, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@340e51ad, [ImportsContextCustomizer@244a0f60 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@34f053a4, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7371d6d3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2f7d24f2], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
-21:35:43.543 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.543 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
-21:35:43.635 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+<pre>08:15:56.516 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:56.532 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+08:15:56.556 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+08:15:56.617 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+08:15:56.649 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest], using SpringBootContextLoader
+08:15:56.658 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: class path resource [com/ceiba/parquedero/infraestructura/controlador/ControladorRegistroTest-context.xml] does not exist
+08:15:56.660 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: class path resource [com/ceiba/parquedero/infraestructura/controlador/ControladorRegistroTestContext.groovy] does not exist
+08:15:56.661 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+08:15:56.664 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: ControladorRegistroTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:15:56.779 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:56.942 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\brayan.sanchez\Documents\parqueadero\build\classes\java\main\com\ceiba\parquedero\ParquederoCeibaApplication.class]
+08:15:56.944 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ceiba.parquedero.ParquederoCeibaApplication for test class com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest
+08:15:57.159 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]: using defaults.
+08:15:57.160 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+08:15:57.184 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+08:15:57.186 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+08:15:57.187 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61881cb7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5b38209e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b3de02d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@17e563c5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3629b82a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2c8f52a1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@817f395, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@34504219, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4fc35451, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@190f0d52]
+08:15:57.190 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:57.192 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:57.192 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:57.193 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:57.200 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7449730 testClass = ControladorRegistroTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@56005fad testClass = ControladorRegistroTest, locations = '{}', classes = '{class com.ceiba.parquedero.ParquederoCeibaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e7e8512, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@42b74f6c, [ImportsContextCustomizer@19468b55 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@19cf2742, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@34cbe81, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3e6a2d48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+08:15:57.201 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:57.202 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.parquedero.infraestructura.controlador.ControladorRegistroTest]
+08:15:57.285 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -136,29 +136,29 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.5.RELEASE)
 
-2019-06-25 21:35:44.426  INFO 7888 --- [    Test worker] c.c.p.i.c.ControladorRegistroTest        : Starting ControladorRegistroTest on BRAYAN-SANCHEZ with PID 7888 (started by brayan.sanchez in C:\Users\brayan.sanchez\Documents\parqueadero)
-2019-06-25 21:35:44.431  INFO 7888 --- [    Test worker] c.c.p.i.c.ControladorRegistroTest        : No active profile set, falling back to default profiles: default
-2019-06-25 21:35:48.027  INFO 7888 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity&lt;springfox.documentation.spring.web.json.Json&gt; springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-06-25 21:35:48.768  INFO 7888 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-06-25 21:35:49.247  INFO 7888 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2019-06-25 21:35:49.247  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-06-25 21:35:49.270  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 23 ms
-2019-06-25 21:35:49.309  INFO 7888 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-06-25 21:35:49.390  INFO 7888 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-06-25 21:35:49.459  INFO 7888 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-06-25 21:35:49.825  INFO 7888 --- [    Test worker] c.c.p.i.c.ControladorRegistroTest        : Started ControladorRegistroTest in 6.174 seconds (JVM running for 9.664)
-2019-06-25 21:35:49.901  INFO 7888 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2019-06-25 21:35:49.901  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-06-25 21:35:49.902  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2019-06-25 21:35:50.222  INFO 7888 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2019-06-25 21:35:50.222  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-06-25 21:35:50.223  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2019-06-25 21:35:50.265  INFO 7888 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2019-06-25 21:35:50.265  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-06-25 21:35:50.266  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2019-06-25 21:35:50.307  INFO 7888 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2019-06-25 21:35:50.308  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-06-25 21:35:50.309  INFO 7888 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-06-26 08:15:57.946  INFO 1916 --- [    Test worker] c.c.p.i.c.ControladorRegistroTest        : Starting ControladorRegistroTest on BRAYAN-SANCHEZ with PID 1916 (started by brayan.sanchez in C:\Users\brayan.sanchez\Documents\parqueadero)
+2019-06-26 08:15:57.951  INFO 1916 --- [    Test worker] c.c.p.i.c.ControladorRegistroTest        : No active profile set, falling back to default profiles: default
+2019-06-26 08:16:01.684  INFO 1916 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity&lt;springfox.documentation.spring.web.json.Json&gt; springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-26 08:16:02.448  INFO 1916 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 08:16:02.905  INFO 1916 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-06-26 08:16:02.905  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-06-26 08:16:02.930  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 25 ms
+2019-06-26 08:16:02.970  INFO 1916 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-26 08:16:03.049  INFO 1916 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-26 08:16:03.117  INFO 1916 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-26 08:16:03.502  INFO 1916 --- [    Test worker] c.c.p.i.c.ControladorRegistroTest        : Started ControladorRegistroTest in 6.202 seconds (JVM running for 9.942)
+2019-06-26 08:16:03.572  INFO 1916 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-06-26 08:16:03.572  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-06-26 08:16:03.572  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-06-26 08:16:03.888  INFO 1916 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-06-26 08:16:03.889  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-06-26 08:16:03.889  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-06-26 08:16:03.925  INFO 1916 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-06-26 08:16:03.926  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-06-26 08:16:03.927  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-06-26 08:16:03.968  INFO 1916 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-06-26 08:16:03.968  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-06-26 08:16:03.969  INFO 1916 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
 </pre>
 </span>
 </div>
@@ -170,7 +170,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 25, 2019 9:35:53 PM</p>
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 26, 2019 8:16:06 AM</p>
 </div>
 </div>
 </body>

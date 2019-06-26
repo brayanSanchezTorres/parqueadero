@@ -24,6 +24,7 @@ public class ManejadorListarRegistros {
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setEstado(false);
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
+			
 		}
 		return respuesta;
 	}

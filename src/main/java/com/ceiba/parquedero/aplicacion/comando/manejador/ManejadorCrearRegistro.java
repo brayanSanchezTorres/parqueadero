@@ -36,6 +36,7 @@ public class ManejadorCrearRegistro {
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
+			
 		}
 		return respuesta;
 	}

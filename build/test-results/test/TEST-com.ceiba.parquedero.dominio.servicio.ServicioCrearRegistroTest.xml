@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-06-26T02:35:42" hostname="BRAYAN-SANCHEZ" time="0.023">
+<testsuite name="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-06-26T13:15:56" hostname="BRAYAN-SANCHEZ" time="0.026">
   <properties/>
   <testcase name="validarPlazasDisponiblesCarro" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.001"/>
   <testcase name="validarExistenciaMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.001"/>
   <testcase name="validarExistenciaCarro" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.001"/>
-  <testcase name="validarAccesoPorPlacaMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.016"/>
-  <testcase name="validarPlazasDisponiblesMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.002"/>
+  <testcase name="validarAccesoPorPlacaMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.018"/>
+  <testcase name="validarPlazasDisponiblesMoto" classname="com.ceiba.parquedero.dominio.servicio.ServicioCrearRegistroTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
