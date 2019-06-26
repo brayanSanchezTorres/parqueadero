@@ -17,15 +17,6 @@ public class Registro {
 		this.costoEstadia = 0;
 	}
 	
-	public Registro(Vehiculo vehiculo, Calendar fechaEntrada, Calendar fechaSalida, double costoEstadia) {
-		super();
-		this.vehiculo = vehiculo;
-		this.fechaEntrada = fechaEntrada;
-		this.fechaSalida = fechaSalida;
-		this.costoEstadia = costoEstadia;
-	}
-	
-	
 	public Vehiculo getVehiculo() {
 		return vehiculo;
 	}
