@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import com.ceiba.parquedero.aplicacion.comando.ComandoRegistro;
 import com.ceiba.parquedero.aplicacion.respuestadto.Respuesta;
 import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcion;
-import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcionTipos;
 import com.ceiba.parquedero.dominio.modelo.Registro;
 import com.ceiba.parquedero.dominio.modelo.Vehiculo;
 import com.ceiba.parquedero.dominio.servicio.ServicioActualizarRegistro;
@@ -38,11 +37,6 @@ public class ManejadorActualizarRegistro {
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(e.getTipo());
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-			respuesta.setEstado(false);
-			respuesta.setMensaje(e.getMessage());
-			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
 		}
 		
 		return respuesta;
