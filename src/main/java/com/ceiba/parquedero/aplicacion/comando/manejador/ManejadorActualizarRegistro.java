@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.ceiba.parquedero.aplicacion.comando.ComandoRegistro;
-import com.ceiba.parquedero.aplicacion.consulta.manejador.ManejadorListarRegistros;
 import com.ceiba.parquedero.aplicacion.respuestadto.Respuesta;
 import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcion;
 import com.ceiba.parquedero.dominio.excepcion.ParqueaderoExcepcionTipos;
@@ -18,7 +17,7 @@ public class ManejadorActualizarRegistro {
 
 	private final ServicioActualizarRegistro servicioActualizarRegistro;
 	
-	private static final Logger LOGACTUALIZAR = LoggerFactory.getLogger(ManejadorListarRegistros.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ManejadorActualizarRegistro.class);
 	
 	public ManejadorActualizarRegistro(ServicioActualizarRegistro servicioActualizarRegistro) {
 		this.servicioActualizarRegistro = servicioActualizarRegistro;
@@ -35,12 +34,12 @@ public class ManejadorActualizarRegistro {
 			respuesta.setMensaje("Tarea Existosa");
 			respuesta.setEntidad(registro);
 		} catch (ParqueaderoExcepcion e) {
-			LOGACTUALIZAR.error(e.getMessage(), e);
+			LOGGER.error(e.getMessage(), e);
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(e.getTipo());
 		} catch (Exception e) {
-			LOGACTUALIZAR.error(e.getMessage(), e);
+			LOGGER.error(e.getMessage(), e);
 			respuesta.setEstado(false);
 			respuesta.setMensaje(e.getMessage());
 			respuesta.setTipo(ParqueaderoExcepcionTipos.GENERICO);
