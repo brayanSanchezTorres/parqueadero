@@ -1,5 +1,6 @@
 package com.ceiba.parquedero.aplicacion.comando.manejador;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.ceiba.parquedero.aplicacion.comando.ComandoRegistro;
@@ -14,7 +15,7 @@ import com.ceiba.parquedero.dominio.servicio.ServicioActualizarRegistro;
 public class ManejadorActualizarRegistro {
 
 	private final ServicioActualizarRegistro servicioActualizarRegistro;
-
+	
 	public ManejadorActualizarRegistro(ServicioActualizarRegistro servicioActualizarRegistro) {
 		this.servicioActualizarRegistro = servicioActualizarRegistro;
 	}

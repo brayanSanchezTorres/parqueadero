@@ -25,16 +25,11 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = { "controlador registro" })
 public class ControladorRegistro {
 	
-	@Autowired
 	private final ManejadorListarRegistros manejadorListarRegistros;
-	
-	@Autowired
 	private final ManejadorCrearRegistro manejadorCrearRegistro;
-	
-	@Autowired
 	private final ManejadorActualizarRegistro manejadorActualizarRegistro;
 	
-	
+	@Autowired
 	public ControladorRegistro(ManejadorListarRegistros manejadorListarRegistros,
 			ManejadorCrearRegistro manejadorCrearRegistro, ManejadorActualizarRegistro manejadorActualizarRegistro) {
 		this.manejadorCrearRegistro = manejadorCrearRegistro;
